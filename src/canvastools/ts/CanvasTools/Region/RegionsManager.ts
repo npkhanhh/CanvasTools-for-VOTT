@@ -347,6 +347,20 @@ export class RegionsManager {
     }
 
     /**
+     * Deletes a region with specified `id`.
+     * @param id - Id of the region to delete.
+     */
+    public rotateRegionById(id: string) {
+        const region = this.lookupRegionByID(id);
+
+        if (region != null) {
+            region.move(1000, 1000);
+        }
+
+    }
+
+
+    /**
      * Deletes all the regions from the manager.
      */
     public deleteAllRegions() {
