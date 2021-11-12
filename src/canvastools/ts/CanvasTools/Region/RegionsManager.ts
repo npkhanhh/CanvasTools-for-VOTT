@@ -354,7 +354,7 @@ export class RegionsManager {
         const region = this.lookupRegionByID(id);
 
         if (region != null) {
-            region.move(1000, 1000);
+            console.log(region);
         }
 
     }

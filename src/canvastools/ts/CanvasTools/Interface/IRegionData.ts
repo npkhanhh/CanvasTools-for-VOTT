@@ -36,4 +36,9 @@ export interface IRegionData extends IPoint2D, IRect {
      * The type of the region.
      */
     type: RegionDataType;
+
+    /**
+     * The rotated angle of the region.
+     */
+    rotateAngle: number;
 }

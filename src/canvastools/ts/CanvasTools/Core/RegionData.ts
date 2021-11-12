@@ -180,6 +180,11 @@ export class RegionData implements IRegionData, IMovable, IResizable {
         return this.regionType;
     }
 
+    public set rotateAngle(angle: number) {
+        this.angle = angle;
+    }
+
+    protected angle: number;
     protected corner: Point2D;
     protected regionRect: Rect;
     protected regionPoints: Point2D[];
@@ -389,6 +394,8 @@ export class RegionData implements IRegionData, IMovable, IResizable {
                 return { x: point.x, y: point.y };
             }),
             type: this.regionType,
+            rotateAngle: this.rotateAngle,
         };
     }
+
 }
