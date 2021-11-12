@@ -875,8 +875,7 @@ export class Editor {
     public scaleRegionToSourceSize(regionData: RegionData, sourceWidth?: number, sourceHeight?: number): RegionData {
         const sw = (sourceWidth !== undefined) ? sourceWidth : this.sourceWidth;
         const sh = (sourceHeight !== undefined) ? sourceHeight : this.sourceHeight;
-        const a = 1234;
-        console.log(a);
+
         const xf = sw / this.frameWidth;
         const yf = sh / this.frameHeight;
 
