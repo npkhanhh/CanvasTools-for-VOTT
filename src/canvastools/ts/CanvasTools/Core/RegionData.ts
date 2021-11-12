@@ -357,6 +357,14 @@ export class RegionData implements IRegionData, IMovable, IResizable {
         this.regionPoints =  this.regionPoints.map((p) => new Point2D(p.x * xf, p.y * yf));
     }
 
+    public moveRegionUp(): void {
+
+        this.corner = new Point2D(this.x, this.y - 10);
+        this.regionRect = new Rect(this.width, this.height);
+        this.regionPoints =  this.regionPoints.map((p) => new Point2D(p.x, p.y - 10));
+    }
+
+
     /**
      * Creates a copy of this region data
      * @returns A new `RegionData` object with copied properties
