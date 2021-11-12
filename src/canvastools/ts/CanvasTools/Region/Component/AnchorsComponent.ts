@@ -242,6 +242,7 @@ export abstract class AnchorsComponent extends RegionComponent {
      * @param e - PointerEvent object.
      */
     protected onGhostPointerMove(e: PointerEvent) {
+        console.log(e)
         if (this.isDragged) {
             const ghost = (e.target as HTMLElement).getBoundingClientRect();
             const rdx = e.clientX - ghost.left;
