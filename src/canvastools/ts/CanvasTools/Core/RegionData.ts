@@ -289,6 +289,7 @@ export class RegionData implements IRegionData, IMovable, IResizable {
         let xmax = 0;
         let ymin = Number.MAX_VALUE;
         let ymax = 0;
+        console.log(points)
 
         // Update region position and size
         points.forEach((point) => {
@@ -356,14 +357,6 @@ export class RegionData implements IRegionData, IMovable, IResizable {
         this.regionRect = new Rect(this.width * xf, this.height * yf);
         this.regionPoints =  this.regionPoints.map((p) => new Point2D(p.x * xf, p.y * yf));
     }
-
-    public moveRegionUp(): void {
-
-        this.corner = new Point2D(this.x, this.y - 500);
-        this.regionRect = new Rect(this.width, this.height);
-        this.regionPoints =  this.regionPoints.map((p) => new Point2D(p.x, p.y - 500));
-    }
-
 
     /**
      * Creates a copy of this region data

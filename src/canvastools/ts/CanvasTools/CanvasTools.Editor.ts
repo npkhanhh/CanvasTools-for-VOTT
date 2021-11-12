@@ -886,19 +886,6 @@ export class Editor {
 
 
     /**
-     * Scales the `RegionData` object from frame to source size.
-     * @param regionData - The `RegionData` object.
-     * @param sourceWidth - [Optional] The source width.
-     * @param sourceHeight - [Optional] The source height.
-     * @returns Resized `RegionData` object.
-     */
-    public moveRegionUpBy10px(regionData: RegionData): RegionData {
-        const rd = regionData.copy();
-        rd.moveRegionUp();
-        return rd;
-    }
-
-    /**
      * Scales the `RegionData` object from source to frame size.
      * @param regionData - The `RegionData` object.
      * @param sourceWidth - [Optional] The source width.
